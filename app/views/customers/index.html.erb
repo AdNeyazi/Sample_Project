@@ -27,10 +27,7 @@
           <td class="border border-gray-200 px-4 py-2"><%= customer.user_id %></td>
           <td class="border border-gray-200 px-4 py-2"><%= link_to 'Show', customer, class: 'text-blue-500 hover:text-blue-700' %></td>
           <td class="border border-gray-200 px-4 py-2">
-            <% if can? :update, customer %>
-              <%= link_to 'Edit', edit_customer_path(customer), class: 'text-green-500 hover:text-green-700' %>
-            <% end %>
-          </td>
+              <%= link_to 'Edit', edit_customer_path(customer), class: 'text-green-500 hover:text-green-700' %></td>
           <td class="border border-gray-200 px-4 py-2"><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' }, class: 'text-red-500 hover:text-red-700' %></td>
         </tr>
       <% end %>

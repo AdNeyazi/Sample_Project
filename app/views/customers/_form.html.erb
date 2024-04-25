@@ -1,42 +1,42 @@
 <%= form_with(model: customer) do |form| %>
   <% if customer.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
+    <div id="error_explanation" class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4">
+      <h2 class="font-bold"><%= pluralize(customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
 
-      <ul>
-        <% customer.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+      <ul class="list-disc list-inside mt-2">
+        <% customer.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="mb-4">
+    <%= form.label :name, class: 'block text-gray-700 font-bold mb-2' %>
+    <%= form.text_field :name, class: 'form-input w-full border border-gray-300 rounded-md py-2 px-4 leading-tight focus:outline-none focus:border-blue-500' %>
   </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
+  <div class="mb-4">
+    <%= form.label :email, class: 'block text-gray-700 font-bold mb-2' %>
+    <%= form.text_field :email, class: 'form-input w-full border border-gray-300 rounded-md py-2 px-4 leading-tight focus:outline-none focus:border-blue-500' %>
   </div>
 
-  <div class="field">
-    <%= form.label :phone %>
-    <%= form.text_field :phone %>
+  <div class="mb-4">
+    <%= form.label :phone, class: 'block text-gray-700 font-bold mb-2' %>
+    <%= form.text_field :phone, class: 'form-input w-full border border-gray-300 rounded-md py-2 px-4 leading-tight focus:outline-none focus:border-blue-500' %>
   </div>
 
-  <div class="field">
-    <%= form.label :address %>
-    <%= form.text_area :address %>
+  <div class="mb-4">
+    <%= form.label :address, class: 'block text-gray-700 font-bold mb-2' %>
+    <%= form.text_area :address, class: 'form-textarea w-full border border-gray-300 rounded-md py-2 px-4 leading-tight focus:outline-none focus:border-blue-500' %>
   </div>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+  <div class="mb-4">
+    <%= form.label :user_id, class: 'block text-gray-700 font-bold mb-2' %>
+    <%= form.text_field :user_id, class: 'form-input w-full border border-gray-300 rounded-md py-2 px-4 leading-tight focus:outline-none focus:border-blue-500' %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="mb-4">
+    <%= form.submit class: 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' %>
   </div>
 <% end %>
