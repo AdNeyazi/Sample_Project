@@ -13,10 +13,5 @@ class User < ApplicationRecord
   def send_welcome_email
     UserMailer.welcome_email(self).deliver_now
   end
-
   
-  def admin?
-    # Your logic to determine if the user is an admin, for example:
-    role == 'admin'
-  end
 end
