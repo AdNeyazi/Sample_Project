@@ -12,8 +12,6 @@ class CustomersController < ApplicationController
 
   # GET /customers/1 or /customers/1.json
   def show
-    @customer = Customer.find(params[:id])
-    authorize! :read, @customer # Ensure user has permission to read the product
   end
 
   # GET /customers/new

@@ -58,7 +58,6 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'cancancan'
 gem 'devise'
 gem 'faker'
 gem 'kaminari'
