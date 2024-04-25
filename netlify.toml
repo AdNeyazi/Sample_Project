@@ -2,8 +2,9 @@
 
 # Build settings
 [build]
-  command = "bundle exec rake assets:precompile"
   publish = "public"
+  command = "bundle exec rake assets:precompile"
+  base = "public"  # Specify the base directory
 
 # Environment variables
 [build.environment]
