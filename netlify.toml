@@ -9,6 +9,7 @@
 # Environment variables
 [build.environment]
   RAILS_ENV = "production"
+  ruby = "3.0.0"
 
 # Redirects and rewrites
 [[redirects]]
